@@ -1,0 +1,75 @@
+<!--Some HTML and Typescript code originate from Jose Gomez-->
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Agumon Plush Review Page</title>
+        <link rel="stylesheet" href="styles.css">
+        <script defer src="src/app.js" ></script>
+    </head>
+    <body>
+
+        <template id="responseTemplate">
+            <h2><span id="responseUserName"></span></h2>
+            <h3>Rated:</h2> <span id="responseRating"></span> stars
+            <br>
+            <h3>Comment:</h2>
+            <span id="responseComment"></span>
+            <hr>
+        </template>
+
+        <div class="head">
+            <h1>Agumon Plush</h1>
+        </div>
+        <br>
+        <div class="product">
+            <div class="image">
+                <image  class="prod" src="images/agumon_plush.jpg" alt="A cute Agumon plush"></image>
+            </div>
+            <div class="about">
+                A cute plush of Agumon from the Digimon franchise.
+                <br>
+                <br>
+                Current rating: <span id="currentRating">0</span> stars
+            </div>
+        </div>
+        <form onsubmit="return false">
+            <div class="row">
+                <div class="column">
+                    <label for="userName">User Name: </label><br>
+                    <input type="text" id="name" required><br>
+                </div>
+                <div class="column">
+                    <label for="rating">Rating: </label><br>
+                    <select id="rating" name="rating" required>
+                        <option disabled selected value="">Choose a Rating</option>
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="column">
+                    <label for="comment">Comment:</label><br>
+                    <textarea rows="4" cols="50" id="comment"></textarea>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="column">
+                    <button class ="review" id="review">Review</button>
+                </div>
+            </div>
+        </form>
+        <hr>
+
+        <div class="row" id="response">
+
+        </div>
+
+    </body>
+</html>
